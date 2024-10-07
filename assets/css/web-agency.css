@@ -11955,3 +11955,28 @@ h6,
   color: red;
 }
 /*# sourceMappingURL=web-agency.css.map */
+
+
+/*qoutes*/
+/* Additional custom styling to fit the form in the web agency theme */
+#quoteFormContainer {
+  background-color: var(--bs-gray-100);
+  border-radius: var(--bs-border-radius-xl);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+#quoteFormContainer .form-control,
+#quoteFormContainer .form-select {
+  padding: 10px 20px;
+  border-radius: var(--bs-border-radius-pill);
+}
+
+#quoteFormContainer .btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+#quoteFormContainer .btn-primary:hover {
+  background-color: var(--bs-link-hover-color);
+}

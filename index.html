@@ -25,7 +25,7 @@
       href="assets/img/apple-icon.png"
     />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-    <title>Web Agency Template by AppSeed</title>
+    <title>ADevs Web Agency</title>
 
     <!-- CSS &  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,6 +59,7 @@
 
     <!-- Video-Popup CSS -->
     <link id="pagestyle" href="./assets/css/video-popup.css" rel="stylesheet" />
+    
   </head>
 
   <body
@@ -73,7 +74,7 @@
         <div class="container-xxl">
           <!-- Logo -->
           <a class="navbar-brand" href="#" title="Web Agency">
-            <img src="assets/img/logo.svg" alt="Web Agency" />
+            <img src="assets/img/apple-icon.png" alt="Web Agency" />
           </a>
 
           <!-- Menu -->
@@ -113,26 +114,88 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#contact-section">Contact Us</a>
                   </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link video-popup-btn"
-                      href="#video-modal"
-                      data-video-url="https://www.youtube.com/embed/wWY_clozJlU"
-                      >Video</a
-                    >
-                  </li>
                 </ul>
               </nav>
             </div>
           </div>
 
           <!-- Get Started Btn -->
-          <a
-            class="links btn btn-primary rounded-pill ms-auto"
-            target="_blank"
-            href="https://github.com/app-generator/design-web-agency"
-            ><span class="text-white">Download</span></a
-          >
+         <!-- "Get Quote" Button -->
+<a class="links btn btn-primary rounded-pill ms-auto" href="#" id="getQuoteBtn">
+  <span class="text-white">Get Quote</span>
+</a>
+
+<!-- Quote Form - Initially Hidden -->
+<div id="quoteFormContainer" class="container-xxl" style="display: none; margin-top: 20px;">
+  <div class="card p-4 shadow-sm">
+    <h3 class="text-primary text-center mb-4">Request a Quote</h3>
+    <form id="quoteForm" class="row g-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control rounded-pill" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control rounded-pill" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="col-md-6">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control rounded-pill" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="col-md-6">
+        <label for="service" class="form-label">Service Interested In</label>
+        <select id="service" class="form-select rounded-pill" required>
+          <option selected disabled value="">Choose...</option>
+          <option value="web-design">Website Design</option>
+          <option value="web-development">Website Development</option>
+          <option value="seo">SEO Services</option>
+          <option value="support">Support</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label for="project-details" class="form-label">Project Details</label>
+        <textarea class="form-control rounded" id="project-details" rows="5" placeholder="Tell us more about your project" required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="button" class="btn btn-secondary rounded-pill mx-2" id="cancelBtn">Cancel</button>
+        <button type="submit" class="btn btn-primary rounded-pill mx-2">Submit Request</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- JavaScript to handle form toggle and submission -->
+<script>
+  const getQuoteBtn = document.getElementById('getQuoteBtn');
+  const quoteFormContainer = document.getElementById('quoteFormContainer');
+  const cancelBtn = document.getElementById('cancelBtn');
+  const quoteForm = document.getElementById('quoteForm');
+
+  // Toggle form visibility when "Get Quote" is clicked
+  getQuoteBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    quoteFormContainer.style.display = 'block'; // Show the form
+    getQuoteBtn.style.display = 'none'; // Hide the "Get Quote" button
+  });
+
+  // Hide the form and show "Get Quote" button when "Cancel" is clicked
+  cancelBtn.addEventListener('click', function() {
+    quoteFormContainer.style.display = 'none'; // Hide the form
+    getQuoteBtn.style.display = 'inline-block'; // Show the "Get Quote" button
+  });
+
+  // Form submission handler
+  quoteForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+    // Normally you would handle form submission here (e.g., send via AJAX)
+    alert('Form submitted successfully!');
+
+    // Reset the form and hide it
+    quoteForm.reset();
+    quoteFormContainer.style.display = 'none'; // Hide the form
+    getQuoteBtn.style.display = 'inline-block'; // Show the "Get Quote" button
+  });
+</script>
 
           <!-- Navbar Toggle Btn -->
           <button
@@ -221,7 +284,7 @@
                 data-aos-duration="500"
               >
                 Help clients grow by providing smart digital solutions since
-                2015.
+                2021.
               </p>
               <ul
                 class="row justify-content-center overflow-hidden p-0 mb-0"
@@ -548,7 +611,7 @@
               <div class="col-lg-5">
                 <div class="info-card">
                   <h3 class="info-card-title text-primary" data-aos="fade-up">
-                    We are in the Business of Website Development since 2015.
+                    We are in the Business of Website Development since 2021.
                   </h3>
                   <p
                     class="h6 info-card-text"
@@ -974,7 +1037,7 @@
                   <li>
                     <a
                       class="contact-info-item d-flex align-items-center"
-                      href="tel:+91-8054000000"
+                      href="tel:+91-9653814628"
                       data-aos="zoom-in"
                     >
                       <img
@@ -982,13 +1045,13 @@
                         src="assets/img/call.png"
                         alt=""
                       />
-                      +91- 80540 00000
+                      +91- 96538 14628
                     </a>
                   </li>
                   <li>
                     <a
                       class="contact-info-item d-flex align-items-center"
-                      href="mailto:Info@website.com"
+                      href="mailto:akshayrajput2616@gmail.com"
                       data-aos="zoom-in"
                       data-aos-duration="500"
                     >
@@ -997,7 +1060,7 @@
                         src="assets/img/email.png"
                         alt=""
                       />
-                      Info@website.com
+                      akshayrajput2616@gmail.com
                     </a>
                   </li>
                   <li>
@@ -1011,7 +1074,7 @@
                         src="assets/img/map.png"
                         alt=""
                       />
-                      Plot 99, Industrial Area Phase 1, NY, USA.
+                      Plot 19, vaishali Nagar,jaipur, INDIA.
                     </span>
                   </li>
                 </ul>

@@ -35,5 +35,3 @@ gulp.task('open', function() {
   gulp.src('index.html')
     .pipe(open());
 });
-
-gulp.task('default', gulp.parallel('open', 'watch'));

@@ -7,7 +7,7 @@
     "example": "root"
   },
   "scripts": {
-    "open-app": "gulp open-app",
+    "open-app": "gulp open",
     "start": "npm run open-app",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp-watch"
@@ -38,7 +38,7 @@
     "gulp-install": "^1.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-open": "^3.0.1",
+    "open": "^8.4.0",
     "sass": "^1.49.9"
   },
   "homepage": "https://appseed.us"
